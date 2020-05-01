@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <div class="logo">
+        <img id="logo" src="{% static 'img/logo.png' %}" alt="" />
+      </div>
+      <div class="nav-content">
+        <a href="{% url 'index' %}"><p>HOME</p></a>
+        <p>SERVICES</p>
+        <a href="#features"><p>FEATURES</p></a>
+        <a href="{% url 'blog' %}"><p>BLOG</p></a>
+        <a href="{% url 'contact' %}"><p>CONTACT</p></a>
+      </div>
+    </nav>
+    <header>
+      <h1>Blog</h1>
+      <p>빈플이 제공하는 베트남 마케팅 트렌드를 받아보세요.</p>
+    </header>
+
+    <div id="latest" class="latest">
+      <img id="latest_img" src="{% static 'img/blog_img.png'%}" alt="img" />
+
+      <a href="https://brunch.co.kr/@yyjzang/233" target="_blank">
+        <h2>베트남의 대표 한국 유튜버 5인</h2></a
+      >
+
+      <h3>베트남에서 활동하는 대표적인 한국 유튜버를 소개합니다.</h3>
+      <br />
+      <!-- <div class="latest_p">
+        <p>
+          유튜브는 이제 전 세계적으로 가장 유명한 플랫폼이 되었습니다. 특히
+          해외에서 한국을 알리거나 해외에서 활동하는 한인 유튜버들이
+          많아졌습니다. 베트남 역시 한국과 가깝게 교류하는 만큼 많은 한인
+          유튜버분들이 활동하고 있는데요.
+        </p>
+      </div> -->
+
+      <br />
+      <p>2020-03-09</p>
+    </div>
+
+    <section id="post_sec">
+      <h1>지난 포스트</h1>
+      <div class="posts">
+        <div class="post1" id="post_content">
+          <a
+            class="blog_title"
+            href="https://brunch.co.kr/@yyjzang/239"
+            target="_blank"
+          >
+            <h2><베트남에 관심있는 사람들을 위한 책 추천></h2></a
+          >
+        </div>
+        <div class="post2" id="post_content">
+          <!-- <img src="img/5.jpg" alt="img" /> -->
+          <a
+            class="blog_title"
+            href="https://brunch.co.kr/@yyjzang/230"
+            target="_blank"
+          >
+            <h2><아무 노래 챌린지로 본 베트남 마케팅></h2></a
+          >
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="f-container">
+        <div class="logo"><img src="{% static 'img/logo.png' %}" alt="" /></div>
+        <br />
+        <div class="p">
+          <p>HOME</p>
+          <p>ABOUT</p>
+          <p>TERM</p>
+          <p>PRIVACY</p>
+        </div>
+        <br />
+        <span>Copyright © 2020 VF. All Rights Reserved. </span>
+      </div>
+    </footer>
+    <script src="{% static 'js/first.js' %}"></script>
+  </body>
+</html>
