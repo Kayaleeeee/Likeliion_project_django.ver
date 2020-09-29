@@ -19,16 +19,15 @@
   <body>
 
     <nav id="navbar">
-      <div  class="logo"><img id='logo'src="{% static 'img/logo.png' %}" alt=""></div>
+      <div  class="logo"><a href="{% url 'index' %}"><img id='logo'src="{% static 'img/logo.png' %}" alt=""></a></div>
       <div class="nav-content">
         <a href="{% url 'index' %}"><p>HOME</p></a>
-        <p>SERVICES</p>
-        <a href="#features"><p>FEATURES</p></a>
+        <a href="{% url 'services' %}"><p>SERVICES</p></a>
+        <a href="{% url 'ranking_sub' %}"><p>RANKING</p></a>
         <a href="{% url 'blog' %}"><p>BLOG</p></a>
         <a href="{% url 'contact' %}"><p>CONTACT</p></a>
-
-      
       </div>
+      <a class='menu' id='menu' href=""><p>MENU</p></a>
     </nav>
     <header>
       <h1>카테고리별 순위</h1>
@@ -55,10 +54,10 @@
 
       <section class="body_text">
         <div class="ranking_menu">
-        <div><i class="fab fa-youtube"></i> <a href="ranking.html">유튜브 구독자 순위</a></div>
-        <div><i class="fas fa-play-circle"></i> <a href="ranking_view.html">유튜브 조회수 순위</a></div>
-        <div><i class="fas fa-fire"></i> <a href="ranking_subs.html">구독자 급상승 채널</a></div>
-        <div><i class="fas fa-folder"></i> <a href="ranking_cate.html">카테고리별 순위</a></div>
+        <div><i class="fab fa-youtube"></i> <a href="ranking.html"><button>유튜브 구독자 순위</button></a></div>
+        <div><i class="fas fa-play-circle"></i> <a href="ranking_view.html"><button>유튜브 조회수 순위</button></a></div>
+        <div><i class="fas fa-fire"></i> <a href="ranking_subs.html"><button>구독자 급상승 채널</button></a></div>
+        <div><i class="fas fa-folder"></i> <a href="ranking_cate.html"><button>카테고리별 순위</button></a></div>
         </div>
 
         <div class="cate_menu">

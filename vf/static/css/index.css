@@ -14,10 +14,16 @@ html {
   background-color: #662ac7;
   border-radius: 100%;
 }
+.logo img:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
 nav .logo img {
   margin-left: 1rem;
 }
 #navbar {
+  position: relative;
   overflow: hidden;
   top: 0;
   display: flex;
@@ -43,11 +49,19 @@ nav a:hover {
   flex-direction: row;
   justify-content: space-evenly;
   font-size: 1.2rem;
+  margin-right: 1rem;
 }
 
 .nav-content p {
   padding: 0 1rem;
+
   text-decoration: none;
+}
+
+a.menu {
+  display: none;
+  font-size: 1.5rem;
+  padding-right: 2rem;
 }
 
 #main {
@@ -206,47 +220,6 @@ ul {
   height: 50vh;
   justify-content: center;
   align-items: center;
-}
-
-.features {
-  font-family: "Nanum Gothic", sans-serif;
-  display: flex;
-  flex-direction: column;
-  height: 60rem;
-  justify-content: space-evenly;
-  background-color: #e3e3e3;
-}
-.features h1 {
-  line-height: -3px;
-  padding: 0;
-}
-
-.features button {
-  margin-left: 3rem;
-}
-
-.feature1,
-.feature2 {
-  display: flex;
-  padding-top: 3rem;
-  justify-content: space-evenly;
-}
-
-.feature-img {
-  width: 30rem;
-  padding: 1rem 3rem;
-}
-
-.f-left {
-  max-width: 50%;
-}
-
-.f-right {
-  width: 30rem;
-}
-
-.f-right h1 {
-  text-align: center;
 }
 
 .contact {
@@ -410,6 +383,7 @@ footer p {
 
 .sticky {
   position: fixed;
+
   top: 0;
   width: 100%;
 }
@@ -418,26 +392,210 @@ footer p {
   box-shadow: 0 4px 5px -2px #525050;
 }
 
-@media (max-width: 1200px) {
-  body {
-    background-color: black;
-  }
-
-  .intro {
-    color: black;
-  }
-
+@media (min-width: 996px) and (max-width: 2550px) {
   .blog {
     grid-template-columns: 450px 450px;
     grid-template-rows: repeat(2, 450px);
     row-gap: 1rem;
   }
   .keyword h1 {
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-weight: bolder;
   }
 
   .blog_content {
+    justify-content: center;
+  }
+  .features {
+    font-family: "Nanum Gothic", sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 60rem;
+    justify-content: space-evenly;
+    background-color: #e3e3e3;
+  }
+  .features h1 {
+    line-height: -3px;
+    padding: 0;
+  }
+
+  .features button {
+    margin-left: 3rem;
+  }
+
+  .feature1,
+  .feature2 {
+    display: flex;
+    padding-top: 3rem;
+    justify-content: space-evenly;
+  }
+
+  .feature-img {
+    width: 30rem;
+    padding: 1rem 3rem;
+  }
+
+  .f-left {
+    max-width: 50%;
+  }
+
+  .f-right {
+    width: 30rem;
+  }
+
+  .f-right h1 {
+    text-align: center;
+  }
+
+  /* 
+  .features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem 8rem;
+    column-gap: 2rem;
+  } */
+}
+
+@media (max-width: 995px) {
+  .blog {
+    display: flex;
+    flex-direction: column;
+    height: 150vh;
+  }
+
+  .keyword h1 {
+    font-size: 1.1rem;
+    font-weight: bolder;
+  }
+  .keyword p {
+    font-size: 13px;
+  }
+
+  #blog_sec h2 {
+    padding-bottom: 1rem;
+  }
+  .f-right h1 {
+    font-size: 1.5rem;
+  }
+
+  #blog_content {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .nav-content {
+    display: none;
+  }
+  a.menu {
+    display: block;
+  }
+
+  #first {
+    height: 70vh;
+  }
+
+  .features {
+    font-family: "Nanum Gothic", sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 60rem;
+    justify-content: space-evenly;
+    background-color: #e3e3e3;
+  }
+  .features h1 {
+    line-height: -3px;
+    padding: 0;
+  }
+
+  .features button {
+    margin-left: 3rem;
+  }
+
+  .feature1,
+  .feature2 {
+    display: flex;
+    padding-top: 3rem;
+    justify-content: space-evenly;
+  }
+
+  .feature-img {
+    width: 30rem;
+    padding: 1rem 3rem;
+  }
+
+  .f-left {
+    max-width: 50%;
+  }
+
+  .f-right {
+    width: 30rem;
+  }
+
+  .f-right h1 {
+    text-align: center;
+  }
+
+  #features {
+    height: 150vh;
+  }
+
+  #features button {
+    margin: 0;
+  }
+  .feature1,
+  .feature2 {
+    height: 80vh;
+  }
+
+  #features,
+  .feature1,
+  .feature2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+  }
+
+  .feature2 img {
+    display: none;
+  }
+
+  .feature-img {
+    width: 100%;
+    display: block;
+    margin: auto;
+    padding: 3rem 0;
+    width: 25rem;
+    text-align: center;
+    align-self: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .first {
+    height: 50vh;
+  }
+  .f-right h1 {
+    font-size: 1rem;
+  }
+
+  .f-right ul,
+  i {
+    justify-content: center;
+    text-align: center;
+    font-size: 0.7rem;
+  }
+  .feature-img {
+    display: block;
+
+    padding: 3rem 0;
+    width: 300px;
+    text-align: center;
+    align-self: center;
     justify-content: center;
   }
 }

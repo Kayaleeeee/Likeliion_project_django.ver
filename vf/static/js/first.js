@@ -16,6 +16,7 @@
 let navbar = document.getElementById("navbar");
 let introduction = document.getElementsByClassName("introduction");
 let f_img = document.getElementsByClassName("feature-img");
+let menu = document.getElementById("menu");
 
 // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
 window.onscroll = function () {
@@ -25,12 +26,12 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
-  let navA = document.querySelectorAll("a");
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
     navbar.style.padding = "15px 10px";
     document.getElementById("logo").style.width = "40px";
     navbar.classList.add("sticky");
     navbar.style.backgroundColor = "white";
+    navbar.style.position = "fixed";
     navbar.classList.add("shadow");
     navbar.style.color = "gray";
   } else {
@@ -56,17 +57,6 @@ function scrollTwo() {
     console.log("out");
   }
 }
-
-// function scrollThird() {
-//   let featureImg = document.getElementById("feature_img");
-//   if (
-//     document.body.scrollTop > 1460 ||
-//     document.documentElement.scrollTop > 1460
-//   ) {
-//     console.log("1234");
-//     featureImg.classList.add("key_class_ani");
-//   }
-// }
 
 let review = document.querySelectorAll("ol");
 let current = 0;

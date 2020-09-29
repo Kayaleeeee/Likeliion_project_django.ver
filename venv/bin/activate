@@ -46,7 +46,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV='/Users/kohdongki/Desktop/likelion_vn/Likelion_team_project-master/venv'
+VIRTUAL_ENV='/Users/kayalee/Desktop/2020_Likelion/LikeLion_project/LikeLion_project 2/venv'
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

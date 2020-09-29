@@ -9,20 +9,23 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <title>빈플 - 베트남 유튜브 광고, 최신 트렌드 한방에</title>
   </head>
   <body>
     <nav id="navbar">
       <div class="logo">
-        <img id="logo" src="{% static 'img/logo.png' %}" alt="" />
+        <a href="{% url 'index' %}"
+          ><img id="logo" src="{% static 'img/logo.png' %}" alt=""
+        /></a>
       </div>
       <div class="nav-content">
         <a href="{% url 'index' %}"><p>HOME</p></a>
-        <p>SERVICES</p>
-        <a href="#features"><p>FEATURES</p></a>
+        <a href="{% url 'services' %}"><p>SERVICES</p></a>
+        <a href="{% url 'ranking_sub' %}"><p>RANKING</p></a>
         <a href="{% url 'blog' %}"><p>BLOG</p></a>
         <a href="{% url 'contact' %}"><p>CONTACT</p></a>
       </div>
+      <a class="menu" id="menu" href=""><p>MENU</p></a>
     </nav>
     <header>
       <h1>Blog</h1>

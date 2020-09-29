@@ -9,10 +9,16 @@
   background-color: #662ac7;
   border-radius: 100%;
 }
+.logo img:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
 nav .logo img {
   margin-left: 1rem;
 }
 #navbar {
+  position: relative;
   overflow: hidden;
   top: 0;
   display: flex;
@@ -38,11 +44,19 @@ nav a:hover {
   flex-direction: row;
   justify-content: space-evenly;
   font-size: 1.2rem;
+  margin-right: 1rem;
 }
 
 .nav-content p {
   padding: 0 1rem;
+
   text-decoration: none;
+}
+
+a.menu {
+  display: none;
+  font-size: 1.5rem;
+  padding-right: 2rem;
 }
 
 .contact-section {
@@ -53,6 +67,32 @@ nav a:hover {
 .container {
   align-content: center;
   align-items: center;
+}
+
+header {
+  margin-top: 15rem;
+  height: 20vh;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
+
+#title {
+  display: block;
+  text-align: center;
+  font-size: 4em;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  padding-bottom: 2rem;
+}
+
+header p {
+  font-size: 20px;
+  padding: 0 5rem;
+}
+
+header h1 {
+  padding-bottom: 1rem;
 }
 
 .head {
@@ -110,6 +150,11 @@ label {
   width: 59rem;
 }
 
+textarea {
+  display: block;
+  width: 55rem;
+}
+
 #btn {
   border: none;
   width: 10rem;
@@ -152,21 +197,25 @@ footer p {
 }
 
 @media (max-width: 1000px) {
-  body {
-    background-color: black;
+  header {
+    padding: 3rem 0;
   }
+
+  .contact-form {
+    justify-content: center;
+  }
+
   .name_company,
-  .email_phone {
+  .email_phone,
+  .inquiry {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding-top: 2rem;
+    padding-top: 1rem;
   }
 
-  .inquiry {
-    display: grid;
-    justify-content: space-evenly;
-    grid-template-columns: 30rem 30rem;
+  #id_contents {
     padding-top: 2rem;
+    width: 25rem;
   }
 }

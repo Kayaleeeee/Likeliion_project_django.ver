@@ -1,4 +1,6 @@
-#!/Users/kohdongki/Desktop/likelion_vn/Likelion_team_project-master/venv/bin/python
+#!/bin/sh
+'''exec' "/Users/kayalee/Desktop/2020_Likelion/LikeLion_project/LikeLion_project 2/venv/bin/python" "$0" "$@"
+' '''
 # -*- coding: utf-8 -*-
 import re
 import sys

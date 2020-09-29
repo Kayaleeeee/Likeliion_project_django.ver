@@ -20,51 +20,34 @@
   <body>
 
     <nav id="navbar">
-      <div  class="logo"><img id='logo'src="{% static 'img/logo.png' %}" alt=""></div>
+      <div  class="logo"><a href="{% url 'index' %}"><img id='logo'src="{% static 'img/logo.png' %}" alt=""></a></div>
       <div class="nav-content">
         <a href="{% url 'index' %}"><p>HOME</p></a>
-        <p>SERVICES</p>
-        <a href="#features"><p>FEATURES</p></a>
+        <a href="{% url 'services' %}"><p>SERVICES</p></a>
+        <a href="{% url 'ranking_sub' %}"><p>RANKING</p></a>
         <a href="{% url 'blog' %}"><p>BLOG</p></a>
         <a href="{% url 'contact' %}"><p>CONTACT</p></a>
-
-      
       </div>
+      <a class='menu' id='menu' href=""><p>MENU</p></a>
     </nav>
     <header>
-      <h1>유튜브 구독자 순위</h1>
+      <h1>Ranking</h1>
+      <p>베트남 유튜브 구독자 순위</p>
     </header>
   
 
     <main>
-      <section class="intro">
-        <div>
-        <span class="profile">
-          <span>
-            <h1><a href="#" target="new">베트남 웹예능계의 선두주자 FAB TV</a></h1>
-          </span>
-          <br />
-          <span class="num">
-            <p>여러 예능 영상들을 만들고 있는 프로덕션이자, 배우 매니지먼트 회사 FAB TV! <br>
-              Chúc mừng! Tin liên quan. Tìm ra fan cuồng đỉnh nhất Việt Nam đạt kỷ lục selfie chung với hơn 100 celeb Việt<Br>
-              ...<br>
-              <a href="#SeeMore"><button id="btn" type="submit">자세히 보기</button></a></p>
-          </span>
-
-        </div>
-        </span>
-      </section>
-
       <section class="body_text">
         <div class="ranking_menu">
-        <div><i class="fab fa-youtube"></i> <a href="ranking.html">유튜브 구독자 순위</a></div>
-        <div><i class="fas fa-play-circle"></i> <a href="ranking_view.html">유튜브 조회수 순위</a></div>
-        <div><i class="fas fa-fire"></i> <a href="ranking_subs.html">구독자 급상승 채널</a></div>
-        <div><i class="fas fa-folder"></i> <a href="ranking_cate.html">카테고리별 순위</a></div>
+        <div><i class="fab fa-youtube"></i> <a href="{% url 'ranking_sub' %}">유튜브 구독자 순위</a></div>
+        <div><i class="fas fa-play-circle"></i> <a href="{% url 'ranking_view' %}">유튜브 조회수 순위</a></div>
+        <div><i class="fas fa-play-circle"></i> <a href="{% url 'ranking_view' %}">평균 조회수 순위</a></div>
+        <div><i class="fas fa-fire"></i> <a href="{% url 'ranking_hot' %}">구독자 급상승 채널</a></div>
+        <!-- <div><i class="fas fa-folder"></i> <a href="">카테고리별 순위</a></div> -->
         </div>
 
         <table class="ranking">
-          <tr>
+          <tr style="color: white; background-color: #662ac7; font-weight: bold;">
               <td>순위</td>   <!-- 1행 1열-->
               <td>채널명</td> <!-- 1행 2열-->
               <td>카테고리</td> <!-- 1행 3열-->
@@ -83,6 +66,25 @@
           </tr>
           {% endfor %}
         </table>
+      </section>
+
+      <section class="intro">
+        <div>
+        <span class="profile">
+          <span>
+            <h1><a href="https://brunch.co.kr/@yyjzang/230" target="_blank">아무 노래 챌린지로 본 베트남 마케팅</a></h1>
+          </span>
+          <br />
+          <span class="num">
+            <p>베트남의 민감한 트렌드를 주도하는 층은 10,20대이다. 이들은 95년 도이머이 정책 이후 고성장을 하는 베트남에서 태어났다.<br />
+               서구문물들이 밀물듯이 들어왔고, 스마트폰을 어릴 때부터 쥔 그들은 SNS는 곧 놀이터나 다름없었다. <br />
+               새로운 문화와 트렌드에 매우 개방적이면서, SNS에서 자신을 뽐내고 표현하기를 바란다. <br />
+              ...<br />
+              <a href="#SeeMore"><button id="btn" type="submit">자세히 보기</button></a></p>
+          </span>
+
+        </div>
+        </span>
       </section>
     </main>
 
