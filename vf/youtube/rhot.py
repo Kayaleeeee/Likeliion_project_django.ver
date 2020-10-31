@@ -9,9 +9,10 @@ html = response.text
 
 soup = BeautifulSoup(html, 'html.parser')
 
+
 def rhot():
 
-    rank_list=[]
+    rank_list = []
     for rank in range(1, 50+1):
         rank_list.append(rank)
 
@@ -59,7 +60,10 @@ def rhot():
         view_list.append(view.get_text())
     # print(view_list)
     image_list = filter(None, image_list)
-    x = zip(rank_list,image_list,link_list,name_list,category_list,sub_list,view_list)
+
+    x = zip(rank_list, image_list, link_list, name_list,
+            category_list, sub_list, gain_list, view_list)
+    # print(x)
     return list(x)
 
 
